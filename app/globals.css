@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+
+
+
+body {
+  background-image: url("/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.container_{
+ @apply flex px-2 py-8  justify-center h-full w-full m-auto bg-no-repeat bg-center bg-cover md:w-2/3 lg:w-1/2;
+}
+
+.container__{
+  @apply flex flex-col gap-8 h-full  p-4 w-full items-center rounded-md bg-black/50 lg:p-7 
+}
+.li_{
+  @apply w-full h-full text-lg tracking-widest font-bold flex text-white/80 cursor-pointer justify-center items-center px-1 py-2 border border-white hover:bg-white/20 md:text-xl;
+}
+
+
+
+
+.font_p{
+  @apply text-white border border-white rounded-full p-2 w-7 h-7 text-center items-center cursor-pointer  hover:bg-white/40 
+}
+
