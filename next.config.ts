@@ -1,29 +1,38 @@
-import type { NextConfig } from "next";
+const createNextIntlPlugin = require("next-intl/plugin");
 
-// const nextConfig: NextConfig = {
-//   /* config options here */
-// };
+const withNextIntl = createNextIntlPlugin();
 
-// export default nextConfig;
 
-/** @type {import('next').NextConfig} */
-const nextConfig: NextConfig = {
+
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "eco-token-omega.vercel.app",
+      },
+      {
+        protocol: "http",
+        hostname: "localhost",
+      },
+    ],
+  },
   async headers() {
     return [
       {
-        // matching all API routes
-        source: "/api/:path*",
+        source: "/:path*", 
         headers: [
-          { key: "Access-Control-Allow-Credentials", value: "true" },
-          { key: "Access-Control-Allow-Origin", value: "*" }, // replace this your actual origin
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "https://eco-token-omega.vercel.app", // یا * برای همه دامنه‌ها
+          },
           {
             key: "Access-Control-Allow-Methods",
-            value: "GET,DELETE,PATCH,POST,PUT",
+            value: "GET, POST, PUT, DELETE, OPTIONS",
           },
           {
             key: "Access-Control-Allow-Headers",
-            value:
-              "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+            value: "Content-Type, Authorization",
           },
         ],
       },
@@ -31,4 +40,6 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = withNextIntl(nextConfig);
+
+
