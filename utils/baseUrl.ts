@@ -1,1 +1,1 @@
-export const baseUrl = `https://eco-token-omega.vercel.app`;
+export const baseUrl = `https://eco-token-indol.vercel.app`;

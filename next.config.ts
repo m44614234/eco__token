@@ -7,7 +7,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "eco-token-omega.vercel.app",
+        hostname: "eco-token-indol.vercel.app/",
       },
       {
         protocol: "http",
@@ -22,7 +22,7 @@ const nextConfig = {
         headers: [
           {
             key: "Access-Control-Allow-Origin",
-            value: "https://eco-token-omega.vercel.app", // یا * برای همه دامنه‌ها
+            value: "https://eco-token-indol.vercel.app", // یا * برای همه دامنه‌ها
           },
           {
             key: "Access-Control-Allow-Methods",

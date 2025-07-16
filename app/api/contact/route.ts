@@ -30,11 +30,7 @@ export async function POST(req: NextRequest) {
       { status: 201 }
     );
 
-    // // اضافه کردن هدرهای CORS
-    // response.headers.set("Access-Control-Allow-Origin", "*");
-    // response.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
-    // response.headers.set("Access-Control-Allow-Headers", "Content-Type");
-
+  
     return response;
   } catch (error: any) {
     console.log("error =>", error);
@@ -42,10 +38,3 @@ export async function POST(req: NextRequest) {
   }
 }
 
-//  export async function OPTIONS(req: NextRequest) {
-//    const response = NextResponse.json({});
-//    response.headers.set("Access-Control-Allow-Origin", "*");
-//    response.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
-//    response.headers.set("Access-Control-Allow-Headers", "Content-Type");
-//    return response;
-//  }
