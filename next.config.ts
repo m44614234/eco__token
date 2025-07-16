@@ -7,7 +7,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "eco-token-indol.vercel.app/",
+        hostname: "eco-token-indol.vercel.app",
       },
       {
         protocol: "http",
